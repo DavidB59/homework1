@@ -3,16 +3,19 @@
     <meta charset="utf-8">
     <title>Mocha Tests</title>
     <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet" />
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 
 
   <!-- YOUR HTML HERE -->
-
-  <img id ="inn" onclick="rest(hero)"> </img>
-  <img id ="dagger"  onclick="(pickUpItem(hero,{ type: 'dagger', damage: 2 }))"> </img>
-  <img id ="bag"  onclick="equipWeapon(hero)"> </img>
-
+<div>
+  <img id ="inn" class="redim_img" onclick="rest(hero)" src="images/auberge.jpeg" >
+  <img id ="dagger" class="redim_img" onclick="pickUpItem(hero,{ type: 'dagger', damage: 2 })" src="images/dague_keris.jpeg">
+  <img id ="bag" class="redim_img" onclick="equipWeapon(hero)" src="images/saccoche.jpeg">
+</div>
+  
 
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
   <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
