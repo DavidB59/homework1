@@ -7,9 +7,11 @@ let hero = {
  health : 10,
  weapon : {
      type : 'sword',
-     damage :2
+     damage :5
  }
 }
+
+
 
 function rest (object) {
 object.health =10;
@@ -95,5 +97,43 @@ function submitNewName (){
     console.log(newName.value)
     hero.name = newName.value
     displayStats();
+
+}
+
+
+function fight (){
+    let ennemy = {
+        health : 4,
+        weapon : {
+            type : 'dagger',
+            damage :2
+        }
+       };
+
+    let damageReceived;
+    let damageInflicted;
+
+    while( hero.health > 0 || ennemy.health >0) {
+    damageReceived = Math.floor(Math.random()*ennemy.weapon.damage)
+    damageInflicted = Math.floor(Math.random()*hero.weapon.damage)
+    
+    hero.health = hero.health - damageReceived;
+    ennemy.health = ennemy.health - damageInflicted;
+    console.log(hero.health)
+    }
+
+    if (hero.health <= 0) {
+        console.log('you lose');
+    
+    
+    }
+        else (console.log('you win'))
+
+}
+
+function test(){
+    let damageInflicted = Math.floor(Math.random()*hero.weapon.damage)
+console.log(damageInflicted)
+console.log(test)
 
 }
