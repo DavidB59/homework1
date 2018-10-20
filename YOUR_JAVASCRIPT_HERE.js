@@ -3,7 +3,7 @@
 let hero = {
  name : 'M\'bak Nana',
  heroic : true,
- inventory : [],
+ inventory : [{type : 'sword',damage :2}],
  health : 10,
  weapon : {
      type : 'sword',
@@ -49,7 +49,7 @@ function displayStats () {
 
     heroName.innerText = 'Name :' + hero.name 
     heroic.innerText = 'heroic :' + hero.heroic
-    inventory.innerText = 'inventory :'+ hero.inventory
+    inventory.innerText = 'inventory :'+ hero.inventory[0].type
     health.innerText = 'health :'+hero.health
 
     console.log('calling display stats')
