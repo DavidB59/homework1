@@ -15,6 +15,8 @@ function rest (object) {
 object.health =10;
 console.log(object.health);
 console.log('function rest');
+displayStats();
+
 return object;
 
 
@@ -24,6 +26,8 @@ return object;
 function pickUpItem (hero,object) {
    hero.inventory.push(object)
    console.log('function pickUpItem');
+   displayStats();
+
 
 };
 
@@ -79,5 +83,17 @@ function displayStats () {
 
 
     //let heroName = document.createElement("h2");
+
+}
+
+
+
+function submitNewName (){
+    let newName
+    newName = document.getElementById("newName")
+    console.log(newName)
+    console.log(newName.value)
+    hero.name = newName.value
+    displayStats();
 
 }
