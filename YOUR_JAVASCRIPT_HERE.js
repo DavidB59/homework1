@@ -11,6 +11,22 @@ let hero = {
  }
 }
 
+let goblin = {
+    health : 4,
+    weapon : {
+        type : 'dagger',
+        damage :2
+    }
+   }
+
+   let ogre = {
+    health : 12,
+    weapon : {
+        type : 'gourdin',
+        damage :4
+    }
+   }
+
 
 
 function rest (object) {
@@ -99,36 +115,55 @@ function submitNewName (){
     displayStats();
 
 }
+let fought = 0
 
 
-function fight (){
-    let ennemy = {
-        health : 4,
-        weapon : {
-            type : 'dagger',
-            damage :2
-        }
-       };
 
+
+
+function fight (ennemy){
+
+    let initialHealthEnnemy = ennemy.health
     let damageReceived;
     let damageInflicted;
 
-    while( hero.health > 0 || ennemy.health >0) {
+    while( hero.health > 0 && ennemy.health >0) {
     damageReceived = Math.floor(Math.random()*ennemy.weapon.damage)
     damageInflicted = Math.floor(Math.random()*hero.weapon.damage)
     
     hero.health = hero.health - damageReceived;
     ennemy.health = ennemy.health - damageInflicted;
-    console.log(hero.health)
     }
 
+    
+   
+    let whoWin
     if (hero.health <= 0) {
-        console.log('you lose');
-    
+        whoWin ='you lose'
     
     }
-        else (console.log('you win'))
+    else (  whoWin ='you win'
+        )
+        displayStats();
 
+    fightID = document.getElementById("fightDiv")
+
+
+    if (fought === 0){
+        let victory = document.createElement("h2");
+        victory.id = "victory"
+
+        fightID.appendChild(victory);
+        victory.innerText =whoWin
+        fought =1
+        console.log( 'condition fulfilled ' + fought)
+    }
+
+    else {   victory.innerText =whoWin
+        console.log(whoWin)
+    }
+
+    ennemy.health = initialHealthEnnemy
 }
 
 function test(){
