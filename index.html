@@ -9,7 +9,6 @@
 <body>
 
 
-  <!-- YOUR HTML HERE -->
 <div>
   <img id ="inn" class="redim_img" onclick="rest(hero)" src="images/auberge.jpeg" >
   <img id ="dagger" class="redim_img" onclick="pickUpItem(hero,{ type: 'dagger', damage: 2 })" src="images/dague_keris.jpeg">
@@ -37,7 +36,6 @@
 </div>
 
 
-  <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
   <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
   <div id="mocha"></div>
 
@@ -45,7 +43,7 @@
   <script src="https://unpkg.com/mocha@4.0.1/mocha.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sinon@3/pkg/sinon.js"></script>
   <script>mocha.setup('bdd')</script>
-  <script src="YOUR_JAVASCRIPT_HERE.js"></script>
+  <script src="javascript.js"></script>
   <script src="game_logic.test.js"></script>
 
 </body>
