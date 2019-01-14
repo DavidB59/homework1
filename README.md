@@ -1,5 +1,5 @@
-# First Codaisseur Homework
-# Simple roleplay game
+Codaisseur Homework, first week.
+Simple roleplay game
 
 The hero can fight a goblin or a giant.
 He can rest at the inn to recover health. ( click on the inn)
